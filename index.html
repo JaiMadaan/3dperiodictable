@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Periodic Table Explorer </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div id="preloader">Loading...</div>
+
+  <header>
+    <h1>3D Periodic Table Explorer</h1>
+    <nav>
+      <button onclick="showScreen('atomic-mass')">Atomic Mass</button>
+      <button onclick="showScreen('molecular-mass')">Molecular Mass</button>
+      <button onclick="showScreen('element-info')">Element Info</button>
+      <button onclick="showScreen('periodic-table')">Full Table</button>
+    </nav>
+    <input type="text" id="search" placeholder="Search element..." oninput="searchElement()">
+  </header>
+
+  <main class="container">
+    <section id="atomic-mass" class="screen active">
+      <h2>Atomic Mass of Elements</h2>
+      <div class="grid" id="atomic-mass-grid"></div>
+    </section>
+
+    <section id="molecular-mass" class="screen">
+      <h2>Molecular Mass of Compounds</h2>
+      <div class="grid" id="molecular-mass-grid"></div>
+    </section>
+
+    <section id="element-info" class="screen">
+      <h2>Element Information</h2>
+      <div class="grid" id="element-info-grid"></div>
+    </section>
+
+    <section id="periodic-table" class="screen">
+      <h2>Periodic Table (Full Tabular View)</h2>
+      <div class="periodic-grid" id="periodic-grid"></div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <footer style="text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: rgb(0, 0, 0);">
+    <h4 style="font-family: cursive;">&copy; All right reserved </h4>
+    <h4 style="font-family: cursive;">Owner :  Mr. Technical Bhaiya aka Jai madaan</h4>
+  </footer>
+</body>
+</html>
